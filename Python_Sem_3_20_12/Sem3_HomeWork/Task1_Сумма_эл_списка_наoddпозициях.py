@@ -4,12 +4,11 @@
 import random
 
 my_list = [random.randint(1, 10) for i in range(10)]
-print(my_list)
 
 sum = 0
-
 for i in range(1, len(my_list), 2):
-    sum += my_list[i]
-    print(my_list[i])
+     sum += my_list[i]
+     print(my_list[i])
 
+print(my_list)
 print(f' Сумма элементов с нечетными индексами  {sum}')
