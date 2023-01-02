@@ -1,5 +1,5 @@
 # Реализуйте алгоритм перемешивания списка. НЕ ИСПОЛЬЗОВАТЬ ВСТРОЕННЫЕ БИБЛИОТЕКИ SHUFFLE, максимум использование библиотеки Random для и получения случайного int
-import random
+# import random
 
 def mix_list(original_list):
 
@@ -33,4 +33,19 @@ print(f'Перемешанный список: \n{mixed_list}')
 # for i in reversed(random_list): print(i, end=' ')  - перевернуть список
 
 # random.shuffle(random_list)   - встроенная функция шафл списка
-# print(random_list)
+#  print(random_list)
+
+exit()
+import random
+
+def list_shuffle(mixed_list: list):
+    shuffled_list = []
+    temp_list = mixed_list.copy()
+
+    for _ in range(len(mixed_list)):
+        position = random.randint(0, len(temp_list) - 1)
+        elem = temp_list.pop(position)
+        shuffled_list.append(elem) #  *pop удалил позицию из темп листа и сразу же добавил ее в шаффл лист
+    return shuffled_list
+
+print(list_shuffle([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]))

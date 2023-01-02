@@ -10,7 +10,7 @@ sum = 0
 
 for i in range(1, n+1):
 
-    num = (1 + 1 /i) **i
+    num = (1 + 1 /i) ** i
     num = round(num,2)
     my_list.append(num)
 
